@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* BitlyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* BitlyAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* BitlyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* BitlyViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* BitlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* BitlyViewController.m */; };
+		6F53903411039048001E1DB3 /* BitlyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F53903311039048001E1DB3 /* BitlyService.m */; };
+		6F5390F311039C86001E1DB3 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390DE11039C86001E1DB3 /* CDataScanner.m */; };
+		6F5390F411039C86001E1DB3 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390E111039C86001E1DB3 /* CDataScanner_Extensions.m */; };
+		6F5390F511039C86001E1DB3 /* NSCharacterSet_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390E311039C86001E1DB3 /* NSCharacterSet_Extensions.m */; };
+		6F5390F611039C86001E1DB3 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390E511039C86001E1DB3 /* NSDictionary_JSONExtensions.m */; };
+		6F5390F711039C86001E1DB3 /* NSScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390E711039C86001E1DB3 /* NSScanner_Extensions.m */; };
+		6F5390F811039C86001E1DB3 /* CJSONDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390EA11039C86001E1DB3 /* CJSONDataSerializer.m */; };
+		6F5390F911039C86001E1DB3 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390EC11039C86001E1DB3 /* CJSONDeserializer.m */; };
+		6F5390FA11039C86001E1DB3 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390EE11039C86001E1DB3 /* CJSONScanner.m */; };
+		6F5390FB11039C86001E1DB3 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390F011039C86001E1DB3 /* CJSONSerializer.m */; };
+		6F5390FC11039C86001E1DB3 /* CSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390F211039C86001E1DB3 /* CSerializedJSONData.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* BitlyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* BitlyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Bitly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* BitlyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BitlyViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* BitlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* BitlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Bitly_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bitly_Prefix.pch; sourceTree = "<group>"; };
+		6F53903211039048001E1DB3 /* BitlyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyService.h; sourceTree = "<group>"; };
+		6F53903311039048001E1DB3 /* BitlyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyService.m; sourceTree = "<group>"; };
+		6F5390DD11039C86001E1DB3 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
+		6F5390DE11039C86001E1DB3 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		6F5390E011039C86001E1DB3 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		6F5390E111039C86001E1DB3 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		6F5390E211039C86001E1DB3 /* NSCharacterSet_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCharacterSet_Extensions.h; sourceTree = "<group>"; };
+		6F5390E311039C86001E1DB3 /* NSCharacterSet_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCharacterSet_Extensions.m; sourceTree = "<group>"; };
+		6F5390E411039C86001E1DB3 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		6F5390E511039C86001E1DB3 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		6F5390E611039C86001E1DB3 /* NSScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScanner_Extensions.h; sourceTree = "<group>"; };
+		6F5390E711039C86001E1DB3 /* NSScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScanner_Extensions.m; sourceTree = "<group>"; };
+		6F5390E911039C86001E1DB3 /* CJSONDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDataSerializer.h; sourceTree = "<group>"; };
+		6F5390EA11039C86001E1DB3 /* CJSONDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDataSerializer.m; sourceTree = "<group>"; };
+		6F5390EB11039C86001E1DB3 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		6F5390EC11039C86001E1DB3 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		6F5390ED11039C86001E1DB3 /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		6F5390EE11039C86001E1DB3 /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		6F5390EF11039C86001E1DB3 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		6F5390F011039C86001E1DB3 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		6F5390F111039C86001E1DB3 /* CSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSerializedJSONData.h; sourceTree = "<group>"; };
+		6F5390F211039C86001E1DB3 /* CSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSerializedJSONData.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Bitly-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Bitly-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6F5390DC11039C86001E1DB3 /* TouchJSON */,
+				6F53903211039048001E1DB3 /* BitlyService.h */,
+				6F53903311039048001E1DB3 /* BitlyService.m */,
+				1D3623240D0F684500981E51 /* BitlyAppDelegate.h */,
+				1D3623250D0F684500981E51 /* BitlyAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* BitlyViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* BitlyViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Bitly.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Bitly_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2899E5210DE3E06400AC0155 /* BitlyViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Bitly-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F5390DC11039C86001E1DB3 /* TouchJSON */ = {
+			isa = PBXGroup;
+			children = (
+				6F5390DF11039C86001E1DB3 /* Extensions */,
+				6F5390E811039C86001E1DB3 /* JSON */,
+				6F5390DD11039C86001E1DB3 /* CDataScanner.h */,
+				6F5390DE11039C86001E1DB3 /* CDataScanner.m */,
+			);
+			path = TouchJSON;
+			sourceTree = "<group>";
+		};
+		6F5390DF11039C86001E1DB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6F5390E011039C86001E1DB3 /* CDataScanner_Extensions.h */,
+				6F5390E111039C86001E1DB3 /* CDataScanner_Extensions.m */,
+				6F5390E211039C86001E1DB3 /* NSCharacterSet_Extensions.h */,
+				6F5390E311039C86001E1DB3 /* NSCharacterSet_Extensions.m */,
+				6F5390E411039C86001E1DB3 /* NSDictionary_JSONExtensions.h */,
+				6F5390E511039C86001E1DB3 /* NSDictionary_JSONExtensions.m */,
+				6F5390E611039C86001E1DB3 /* NSScanner_Extensions.h */,
+				6F5390E711039C86001E1DB3 /* NSScanner_Extensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6F5390E811039C86001E1DB3 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				6F5390E911039C86001E1DB3 /* CJSONDataSerializer.h */,
+				6F5390EA11039C86001E1DB3 /* CJSONDataSerializer.m */,
+				6F5390EB11039C86001E1DB3 /* CJSONDeserializer.h */,
+				6F5390EC11039C86001E1DB3 /* CJSONDeserializer.m */,
+				6F5390ED11039C86001E1DB3 /* CJSONScanner.h */,
+				6F5390EE11039C86001E1DB3 /* CJSONScanner.m */,
+				6F5390EF11039C86001E1DB3 /* CJSONSerializer.h */,
+				6F5390F011039C86001E1DB3 /* CJSONSerializer.m */,
+				6F5390F111039C86001E1DB3 /* CSerializedJSONData.h */,
+				6F5390F211039C86001E1DB3 /* CSerializedJSONData.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Bitly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Bitly" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bitly;
+			productName = Bitly;
+			productReference = 1D6058910D05DD3D006BFB54 /* Bitly.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Bitly" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Bitly */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* BitlyViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* BitlyAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* BitlyViewController.m in Sources */,
+				6F53903411039048001E1DB3 /* BitlyService.m in Sources */,
+				6F5390F311039C86001E1DB3 /* CDataScanner.m in Sources */,
+				6F5390F411039C86001E1DB3 /* CDataScanner_Extensions.m in Sources */,
+				6F5390F511039C86001E1DB3 /* NSCharacterSet_Extensions.m in Sources */,
+				6F5390F611039C86001E1DB3 /* NSDictionary_JSONExtensions.m in Sources */,
+				6F5390F711039C86001E1DB3 /* NSScanner_Extensions.m in Sources */,
+				6F5390F811039C86001E1DB3 /* CJSONDataSerializer.m in Sources */,
+				6F5390F911039C86001E1DB3 /* CJSONDeserializer.m in Sources */,
+				6F5390FA11039C86001E1DB3 /* CJSONScanner.m in Sources */,
+				6F5390FB11039C86001E1DB3 /* CJSONSerializer.m in Sources */,
+				6F5390FC11039C86001E1DB3 /* CSerializedJSONData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Bitly_Prefix.pch;
+				INFOPLIST_FILE = "Bitly-Info.plist";
+				PRODUCT_NAME = Bitly;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Bitly_Prefix.pch;
+				INFOPLIST_FILE = "Bitly-Info.plist";
+				PRODUCT_NAME = Bitly;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Bitly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Bitly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
