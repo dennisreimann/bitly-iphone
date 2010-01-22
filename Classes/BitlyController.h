@@ -1,5 +1,5 @@
 //
-//  BitlyService.h
+//  BitlyController.h
 //  Bitly
 //
 //  Created by Dennis Blöte on 17.01.10.
@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface BitlyService : NSObject {
+@interface BitlyController : NSObject {
 	id delegate;
 	NSString *login;
 	NSString *apiKey;
 	NSString *version;
-  @private
+@private
 	NSMutableDictionary *connectionData;
 }
 
@@ -23,14 +23,15 @@
 @property(nonatomic,retain)NSString *apiKey;
 @property(nonatomic,retain)NSString *version;
 
-+ (id)serviceWithLogin:(NSString *)theLogin apiKey:(NSString *)theApiKey version:(NSString *)theVersion;
++ (id)controllerWithLogin:(NSString *)theLogin apiKey:(NSString *)theApiKey version:(NSString *)theVersion;
 - (void)shortenURL:(NSString *)urlString;
 - (void)expandURL:(NSString *)urlString;
 
 @end
 
-@protocol BitlyServiceDelegate
+@protocol BitlyControllerDelegate
 @optional
-- (void)shortenedLongURL:(NSString *)longURL toShortURL:(NSString *)shortURL;
-- (void)expandedShortURL:(NSString *)shortURL toLongURL:(NSString *)longURL;
+- (void)bitlyShortenedLongURL:(NSString *)theLongURL toShortURL:(NSString *)theShortURL;
+- (void)bitlyExpandedShortURL:(NSString *)theShortURL toLongURL:(NSString *)theLongURL;
+- (void)bitlyRequestForURL:(NSString *)theURL didFailWithError:(NSError *)theError;
 @end

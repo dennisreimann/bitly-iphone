@@ -7,12 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BitlyService.h"
+#import "BitlyViewController.h"
+#import "BitlyController.h"
 
 
-@interface BitlyViewController : UIViewController <BitlyServiceDelegate> {
-
+@interface BitlyViewController : UIViewController <BitlyControllerDelegate> {
+	BitlyController *bitlyController;
+	UITextField *longURLField;
+	UITextField *shortenedURLField;
+	UITextField *expandedURLField;
 }
+
+@property(nonatomic,retain)BitlyController *bitlyController;
+@property(nonatomic,retain)IBOutlet UITextField *longURLField;
+@property(nonatomic,retain)IBOutlet UITextField *shortenedURLField;
+@property(nonatomic,retain)IBOutlet UITextField *expandedURLField;
+
+- (IBAction)shorten:(id)sender;
+- (IBAction)expand:(id)sender;
 
 @end
 

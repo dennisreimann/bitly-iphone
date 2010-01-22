@@ -7,30 +7,85 @@
 //
 
 #import "BitlyViewController.h"
-#import "BitlyService.h"
+#import "Constants.h"
 
-NSString* const bitlyLogin = @"YOUR_LOGIN";
-NSString* const bitlyApiKey = @"YOUR_API_KEY";
-NSString* const bitlyVersion = @"2.0.1";
+
+@interface BitlyViewController ()
+- (void)resignFirstResponders;
+@end
+
 
 @implementation BitlyViewController
 
+@synthesize bitlyController;
+@synthesize longURLField;
+@synthesize shortenedURLField;
+@synthesize expandedURLField;
+
+- (void)dealloc {
+    [bitlyController release], bitlyController = nil;
+    [longURLField release], longURLField = nil;
+    [shortenedURLField release], shortenedURLField = nil;
+    [expandedURLField release], expandedURLField = nil;
+    [super dealloc];
+}
+
+- (void)viewDidUnload {
+    self.longURLField = nil;
+    self.shortenedURLField = nil;
+    self.expandedURLField = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-	BitlyService *bitlyService = [BitlyService serviceWithLogin:bitlyLogin apiKey:bitlyApiKey version:bitlyVersion];
-	bitlyService.delegate = self;
-	[bitlyService shortenURL:@"http://dennisbloete.de"];
-	[bitlyService expandURL:@"http://bit.ly/1RmnUT"];
+	self.bitlyController = [BitlyController controllerWithLogin:BitlyLogin apiKey:BitlyApiKey version:BitlyVersion];
+	self.bitlyController.delegate = self;
+}
+
+#pragma mark Actions
+
+- (IBAction)shorten:(id)sender {
+	[self resignFirstResponders];
+	[bitlyController shortenURL:longURLField.text];
+}
+
+- (IBAction)expand:(id)sender {
+	[self resignFirstResponders];
+	[bitlyController expandURL:shortenedURLField.text];
 }
 
 #pragma mark Bitly delegation
 
-- (void)shortenedLongURL:(NSString *)longURL toShortURL:(NSString *)shortURL {
-	NSLog(@"Shortened %@ to %@", longURL, shortURL);
+- (void)bitlyShortenedLongURL:(NSString *)theLongURL toShortURL:(NSString *)theShortURL {
+	NSLog(@"Shortened %@ to %@", theLongURL, theShortURL);
+	shortenedURLField.text = theShortURL;
 }
 
-- (void)expandedShortURL:(NSString *)shortURL toLongURL:(NSString *)longURL {
-	NSLog(@"Expanded %@ to %@", shortURL, longURL);
+- (void)bitlyExpandedShortURL:(NSString *)theShortURL toLongURL:(NSString *)theLongURL {
+	NSLog(@"Expanded %@ to %@", theShortURL, theLongURL);
+	expandedURLField.text = theLongURL;
+}
+
+- (void)bitlyRequestForURL:(NSString *)theURL didFailWithError:(NSError *)theError {
+	NSLog(@"Request for %@ failed with error: %@", theURL, theError);
+	NSString *errorTitle = [NSString stringWithFormat:@"Bitly Error %d", theError.code];
+	NSString *errorMessage = [theError.userInfo objectForKey:@"errorMessage"];
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:errorTitle message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+}
+
+#pragma mark Touches
+
+- (void)resignFirstResponders {
+	// Resign all first responders so the keyboard gets closed
+	[longURLField resignFirstResponder];
+	[shortenedURLField resignFirstResponder];
+	[expandedURLField resignFirstResponder];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	[self resignFirstResponders];
 }
 
 @end

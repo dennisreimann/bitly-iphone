@@ -15,7 +15,7 @@
 		2899E5220DE3E06400AC0155 /* BitlyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* BitlyViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* BitlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* BitlyViewController.m */; };
-		6F53903411039048001E1DB3 /* BitlyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F53903311039048001E1DB3 /* BitlyService.m */; };
+		6F53903411039048001E1DB3 /* BitlyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F53903311039048001E1DB3 /* BitlyController.m */; };
 		6F5390F311039C86001E1DB3 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390DE11039C86001E1DB3 /* CDataScanner.m */; };
 		6F5390F411039C86001E1DB3 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390E111039C86001E1DB3 /* CDataScanner_Extensions.m */; };
 		6F5390F511039C86001E1DB3 /* NSCharacterSet_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390E311039C86001E1DB3 /* NSCharacterSet_Extensions.m */; };
@@ -26,6 +26,9 @@
 		6F5390FA11039C86001E1DB3 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390EE11039C86001E1DB3 /* CJSONScanner.m */; };
 		6F5390FB11039C86001E1DB3 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390F011039C86001E1DB3 /* CJSONSerializer.m */; };
 		6F5390FC11039C86001E1DB3 /* CSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5390F211039C86001E1DB3 /* CSerializedJSONData.m */; };
+		6F8016461109C6FC003404AC /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8016451109C6FC003404AC /* Constants.m */; };
+		6F8017031109CB4E003404AC /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8017011109CB4E003404AC /* Header.png */; };
+		6F8017041109CB4E003404AC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8017021109CB4E003404AC /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +44,8 @@
 		28D7ACF70DDB3853001CB0EB /* BitlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Bitly_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bitly_Prefix.pch; sourceTree = "<group>"; };
-		6F53903211039048001E1DB3 /* BitlyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyService.h; sourceTree = "<group>"; };
-		6F53903311039048001E1DB3 /* BitlyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyService.m; sourceTree = "<group>"; };
+		6F53903211039048001E1DB3 /* BitlyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyController.h; sourceTree = "<group>"; };
+		6F53903311039048001E1DB3 /* BitlyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyController.m; sourceTree = "<group>"; };
 		6F5390DD11039C86001E1DB3 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
 		6F5390DE11039C86001E1DB3 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
 		6F5390E011039C86001E1DB3 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
@@ -63,6 +66,10 @@
 		6F5390F011039C86001E1DB3 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 		6F5390F111039C86001E1DB3 /* CSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSerializedJSONData.h; sourceTree = "<group>"; };
 		6F5390F211039C86001E1DB3 /* CSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSerializedJSONData.m; sourceTree = "<group>"; };
+		6F8016441109C6FC003404AC /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		6F8016451109C6FC003404AC /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		6F8017011109CB4E003404AC /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Header.png; sourceTree = SOURCE_ROOT; };
+		6F8017021109CB4E003404AC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Bitly-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Bitly-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,10 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				6F5390DC11039C86001E1DB3 /* TouchJSON */,
-				6F53903211039048001E1DB3 /* BitlyService.h */,
-				6F53903311039048001E1DB3 /* BitlyService.m */,
 				1D3623240D0F684500981E51 /* BitlyAppDelegate.h */,
 				1D3623250D0F684500981E51 /* BitlyAppDelegate.m */,
+				6F53903211039048001E1DB3 /* BitlyController.h */,
+				6F53903311039048001E1DB3 /* BitlyController.m */,
 				28D7ACF60DDB3853001CB0EB /* BitlyViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* BitlyViewController.m */,
 			);
@@ -119,6 +126,8 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* Bitly_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				6F8016441109C6FC003404AC /* Constants.h */,
+				6F8016451109C6FC003404AC /* Constants.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -126,9 +135,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2899E5210DE3E06400AC0155 /* BitlyViewController.xib */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Bitly-Info.plist */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				2899E5210DE3E06400AC0155 /* BitlyViewController.xib */,
+				6F8017011109CB4E003404AC /* Header.png */,
+				6F8017021109CB4E003404AC /* Icon.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -230,6 +241,8 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* BitlyViewController.xib in Resources */,
+				6F8017031109CB4E003404AC /* Header.png in Resources */,
+				6F8017041109CB4E003404AC /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +256,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* BitlyAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* BitlyViewController.m in Sources */,
-				6F53903411039048001E1DB3 /* BitlyService.m in Sources */,
+				6F53903411039048001E1DB3 /* BitlyController.m in Sources */,
 				6F5390F311039C86001E1DB3 /* CDataScanner.m in Sources */,
 				6F5390F411039C86001E1DB3 /* CDataScanner_Extensions.m in Sources */,
 				6F5390F511039C86001E1DB3 /* NSCharacterSet_Extensions.m in Sources */,
@@ -254,6 +267,7 @@
 				6F5390FA11039C86001E1DB3 /* CJSONScanner.m in Sources */,
 				6F5390FB11039C86001E1DB3 /* CJSONSerializer.m in Sources */,
 				6F5390FC11039C86001E1DB3 /* CSerializedJSONData.m in Sources */,
+				6F8016461109C6FC003404AC /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

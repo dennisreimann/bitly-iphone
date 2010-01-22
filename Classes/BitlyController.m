@@ -1,22 +1,23 @@
 //
-//  BitlyService.m
+//  BitlyController.m
 //  Bitly
 //
 //  Created by Dennis Blöte on 17.01.10.
 //  Copyright 2010 //dennisbloete. All rights reserved.
 //
 
-#import "BitlyService.h"
+#import "BitlyController.h"
+#import "Constants.h"
 #import "CJSONDeserializer.h"
 
-@interface BitlyService ()
+
+@interface BitlyController ()
 @property(nonatomic,retain)NSMutableDictionary *connectionData;
 - (void)startRequestWithURLString:(NSString *)urlString;
 @end
 
-NSString* const apiBase = @"http://api.bit.ly/";
 
-@implementation BitlyService
+@implementation BitlyController
 
 @synthesize login;
 @synthesize apiKey;
@@ -24,8 +25,8 @@ NSString* const apiBase = @"http://api.bit.ly/";
 @synthesize delegate;
 @synthesize connectionData;
 
-+ (id)serviceWithLogin:(NSString *)theLogin apiKey:(NSString *)theApiKey version:(NSString *)theVersion {
-	BitlyService *service = [[[[self class] alloc] init] autorelease];
++ (id)controllerWithLogin:(NSString *)theLogin apiKey:(NSString *)theApiKey version:(NSString *)theVersion {
+	BitlyController *service = [[[[self class] alloc] init] autorelease];
 	service.login = theLogin;
 	service.apiKey = theApiKey;
 	service.version = theVersion;
@@ -58,12 +59,12 @@ NSString* const apiBase = @"http://api.bit.ly/";
 #pragma mark API methods
 
 - (void)shortenURL:(NSString *)urlString {
-	NSString *requestURLString = [NSString stringWithFormat:@"%@%@?version=%@&login=%@&apiKey=%@&longUrl=%@", apiBase, @"shorten", version, login, apiKey, urlString];
+	NSString *requestURLString = [NSString stringWithFormat:@"%@%@?version=%@&login=%@&apiKey=%@&longUrl=%@", BitlyApiBaseURL, @"shorten", version, login, apiKey, urlString];
 	[self startRequestWithURLString:requestURLString];
 }
 
 - (void)expandURL:(NSString *)urlString {
-	NSString *requestURLString = [NSString stringWithFormat:@"%@%@?version=%@&login=%@&apiKey=%@&shortUrl=%@", apiBase, @"expand", version, login, apiKey, urlString];
+	NSString *requestURLString = [NSString stringWithFormat:@"%@%@?version=%@&login=%@&apiKey=%@&shortUrl=%@", BitlyApiBaseURL, @"expand", version, login, apiKey, urlString];
 	[self startRequestWithURLString:requestURLString];
 }
 
@@ -83,18 +84,28 @@ NSString* const apiBase = @"http://api.bit.ly/";
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 	NSString *key = [NSString stringWithFormat:@"%d", [connection hash]];
-	NSMutableData *responseData = [self.connectionData objectForKey:key];
+	NSData *responseData = [self.connectionData objectForKey:key];
 	NSDictionary *result = [[CJSONDeserializer deserializer] deserializeAsDictionary:responseData error:nil];
 	NSDictionary *urlResult = [[[result objectForKey:@"results"] allValues] objectAtIndex:0];
-	if ([urlResult objectForKey:@"shortUrl"]) {
-		SEL selector = @selector(shortenedLongURL:toShortURL:);
+	if ([urlResult objectForKey:@"errorCode"] && [urlResult objectForKey:@"errorMessage"]) {
+		SEL selector = @selector(bitlyRequestForURL:didFailWithError:);
+		if ([delegate respondsToSelector:selector]) {
+			NSString *url = [[[result objectForKey:@"results"] allKeys] objectAtIndex:0];
+			NSString *errorMessage = [urlResult objectForKey:@"errorMessage"];
+			NSInteger errorCode = [[urlResult objectForKey:@"errorCode"] integerValue];
+			NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:errorMessage, @"errorMessage", nil];
+			NSError *error = [NSError errorWithDomain:@"BitlyErrorDomain" code:errorCode userInfo:userInfo];
+			[delegate performSelector:selector withObject:url withObject:error];
+		}
+	} else if ([urlResult objectForKey:@"shortUrl"]) {
+		SEL selector = @selector(bitlyShortenedLongURL:toShortURL:);
 		if ([delegate respondsToSelector:selector]) {
 			NSString *longURL = [[[result objectForKey:@"results"] allKeys] objectAtIndex:0];
 			NSString *shortURL = [urlResult objectForKey:@"shortUrl"];
 			[delegate performSelector:selector withObject:longURL withObject:shortURL];
 		}
 	} else if ([urlResult objectForKey:@"longUrl"]) {
-		SEL selector = @selector(expandedShortURL:toLongURL:);
+		SEL selector = @selector(bitlyExpandedShortURL:toLongURL:);
 		if ([delegate respondsToSelector:selector]) {
 			NSString *hash = [[[result objectForKey:@"results"] allKeys] objectAtIndex:0];
 			NSString *shortURL = [NSString stringWithFormat:@"http://bit.ly/%@", hash];
